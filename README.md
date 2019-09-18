@@ -1,2 +1,29 @@
 # packer-ubuntu
-VirtualBox base box with Ubuntu Bionic Beaver
+Vagrant VirtualBox base box with Ubuntu Bionic Beaver 64bit
+
+# Purpose 
+
+This repository attempts to have minimal amount of code that is required to create an Ubuntu Bionic Beaver 64it box using Packer for running in VirtualBox with management by Vagrant
+
+# Prerequisites
+
+1. To download the content of this repository you will need **git command-line tools**(recommended) or **Git UI Client**. To install official command-line Git tools please [find here instructions](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git) for various operation systems. 
+2. This box for virtualizaion using **VirtualBox**, download the binaries for your [platform here](https://www.virtualbox.org/wiki/Downloads) and then follow [instructions for installation](https://www.virtualbox.org/manual/ch02.html)
+3. For managing of VM (virtual machines) we are going to use **Vagrant**. To install **Vagrant** , please follow instructions here : [official Vargant installation manual](https://www.vagrantup.com/docs/installation/)
+4. For creating bas box image we need **Packer** - an open source tool for creating identical machine images for multiple platforms from a single source configuration.  You cam [download for your platform here](https://www.packer.io/downloads.html)  and then [follow this installation instrucion](https://www.packer.io/intro/getting-started/install.html#precompiled-binaries). 
+
+# How to use
+
+# TODO
+
+- [ ] get require ISO links and checksums
+- [ ] create basic template
+- [ ] build first box
+- [ ] create initial Vagrant template to run the box
+- [ ] tune packer template
+- [ ] test box
+- [ ] update readme with instructions
+
+# DONE
+
+- [x] create inital readme
