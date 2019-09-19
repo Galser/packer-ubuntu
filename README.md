@@ -16,7 +16,6 @@ This repository attempts to have minimal amount of code that is required to crea
 
 # TODO
 
-- [ ] build first box
 - [ ] create initial Vagrant template to run the box
 - [ ] tune packer template
 - [ ] test box
@@ -29,3 +28,8 @@ This repository attempts to have minimal amount of code that is required to crea
     - [Ubuntu 18.04.3](http://releases.ubuntu.com/18.04.3/ubuntu-18.04.3-live-server-amd64.iso?_ga=2.8014258.1409596254.1568807879-1626201701.1568377158)
     - CRC  : "b9beac143e36226aa8a0b03fc1cbb5921cff80123866e718aaeba4edb81cfa63"
 - [X] create basic template
+- [X] build first box
+
+# HINTS
+
+- Starting from Ubuntu Bionic Beaver LTS **RELEASE** ( warning - RELEASE .e.g ) the server ISO to use must be alternative iso, not main one, casper.
