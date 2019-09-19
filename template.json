@@ -53,5 +53,19 @@
         "type": "virtualbox-iso",        
         "virtualbox_version_file": ".vbox_version"
       }
-    ]
+    ],
+    "provisioners": [
+        {
+          "execute_command": "echo 'vagrant' | {{.Vars}} sudo -E -S bash '{{.Path}}'",
+          "script": "scripts/provision.sh",
+          "type": "shell"
+        }
+      ],    
+    "post-processors": [
+        {
+          "type": "vagrant",
+          "keep_input_artifact": true,
+          "output": "{{.BuildName}}.box"
+        }
+      ]
   }
