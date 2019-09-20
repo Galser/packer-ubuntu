@@ -19,7 +19,7 @@ This repository attempts to have minimal amount of code that is required to crea
 
 1. To download the copy of the code (*clone* in Git terminology) - go to the location of your choice (normally some place in home folder) and run in terminal `git clone https://github.com/Galser/packer-ubuntu.git` ; in case you are using alternative Git Client - please follow appropriate instruction for it and download(*clone*) [this repo](https://github.com/Galser/packer-ubuntu.git). 
 2. Previous step should create the folder that contains copy of repository. Default name is going to be the same as the name of repository e.g. `packer-ubuntu`. Locate and open it. To do this in UNIX Terminal execute `cd packer-ubuntu` 
-3. Now to create the Vagrant base box we are going to use Packer and [template](templates.json) with [provision scripts](scripts/provision.sh) provided in this repo. Run from command line `packer -force template.json`
+3. Now to create the Vagrant base box we are going to use Packer and [template](templates.json) with [provision scripts](scripts/provision.sh) provided in this repo. Run from command line `packer template.json`
 *Note: It is going to take some time, as Packer need to download the full ISO image of the operating system, run it, make installation and all required adjustments and then pack everything into format suitable for consuming by Vagrant running with VirtualBox*
 In case of successful process completion you would see these lines :
 ```
@@ -76,6 +76,7 @@ You can stop here, or do several *complimentary steps* to test run the box.
 - [x] test box
 - [X] update readme with instructions
 
-# HINTS
+
+## HINTS
 
 - Starting from Ubuntu Bionic Beaver LTS **RELEASE** ( warning - RELEASE .e.g ) the server ISO to use must be alternative iso, not main one, casper.
