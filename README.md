@@ -64,26 +64,42 @@ Output should look like :
  ```
  
 - Now we can initialize our Vagrant environment. This will create **Vagrantfile** in the current folder with all the required settings to run this base box. 
-```
-vagrant init ubuntu-1804-vbox
-```
+ ```
+ vagrant init ubuntu-1804-vbox
+ ```
+ 
+- To create and provision virtual machine with Vagrant - execute from command line :
+ ```
+ vagrant up
+ ```
+ ( *This will utilize settings from previous step - from Vagrantfile* )
 
-- To create and provision virtual machine with Vagrant - execute from command line `vagrant up` ( *This will utilize settings from previous step - from Vagrantfile* )  :
+- At this point VM already up and running , so you can use SSH client to connect to it. For example for Linux and MacOS - execute from command-line : 
+ ```
+ vagrant ssh
+ ```
 
-- At this point VM already up and running , so you can use SSH client to connect to it. For example for Linux and MacOS - execute from command-line : `vagrant ssh`
 You should see Basic Ubuntu greeting at first line , something like this : 
-
-```Welcome to Ubuntu 18.04.3 LTS (GNU/Linux 4.15.0-55-generic x86_64)```
+ ```
+ Welcome to Ubuntu 18.04.3 LTS (GNU/Linux 4.15.0-55-generic x86_64)
+ ```
 
 Play around, but remember - this is **base box** - e.g. bare minimum Ubuntu Linux.
 
-- When you've done with the tests and don't need VM anymore - you should exit the SSH session - by executing in command line `exit`
+- When you've done with the tests and don't need VM anymore - you should exit the SSH session - by executing in command line :
+ ```
+ exit
+ ```
 
-- Now - to completely destroy the VM and free up all your system resource (CPU, memory)  - execute from command line `vagrant destroy`. Next you should see the question on a new line :
-
-``` default: Are you sure you want to destroy the 'default' VM? [y/N]  ```
-
-Answer `y` from keyboard, and you are good to go
+- Now - to completely destroy the VM and free up all your system resource (CPU, memory)  - execute from command line :
+ ```
+ vagrant destroy
+ ``` 
+ Next you should see the question on a new line :
+ ```
+ default: Are you sure you want to destroy the 'default' VM? [y/N]
+ ```
+ Answer `y` from keyboard, and you are good to go
 
 # TODO
 
