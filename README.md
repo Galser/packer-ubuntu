@@ -33,7 +33,7 @@ In case of successful process completion you would see these lines :
      ubuntu-1804-vbox (vagrant): Compressing: ubuntu-1804-vbox-disk001.vmdk     
  Build 'ubuntu-1804-vbox' finished.
 ```
-Now you should have file `ubuntu-1804-vbox.box` in the current folder. This is you Vagrant base box with Ubuntu Bionice Beaver 64Bit. Cogratulations! 
+Now you should have file `ubuntu-1804-vbox.box` in the current folder. This is you Vagrant base box with Ubuntu Bionice Beaver 64Bit. Congratulations! 
 You can stop here, or do several *complimentary steps* to test run the box. 
 5. We going to initialize Vagrant with our fresh box, bring it up , check and later destroy to free resources.
   1. We need to let know Vagrant about our new box - e.g. add it. To do so execute : `vagrant box add ubuntu-1804-vbox ubuntu-1804-vbox.box`
@@ -51,7 +51,7 @@ You can stop here, or do several *complimentary steps* to test run the box.
   
      ```Welcome to Ubuntu 18.04.3 LTS (GNU/Linux 4.15.0-55-generic x86_64)```
    
-   Play around, but remember - this is **base box** - e.g. bare minumum Ubuntu Linux.
+   Play around, but remember - this is **base box** - e.g. bare minimum Ubuntu Linux.
   
   5. When you've done with the tests and don't need VM anymore - you should exit the SSH session - by executing in command line `exit`
   6. Now - to completely destroy the VM and free up all your system resource (CPU, memory)  - execute from command line `vagrant destroy`. Next you should see the question on a new line :
@@ -69,14 +69,10 @@ You can stop here, or do several *complimentary steps* to test run the box.
 - [X] get require ISO links and checksums :
     - [Ubuntu 18.04.3](http://cdimage.ubuntu.com/releases/18.04.3/release/ubuntu-18.04.3-server-amd64.iso)
     - CRC  : "7d8e0055d663bffa27c1718685085626cb59346e7626ba3d3f476322271f573e"
+    - hint - starting from Ubuntu Bionic Beaver LTS **RELEASE** - the server ISO to use must be alternative iso, not main one, casper.
 - [X] create basic template
 - [X] build first box
 - [X] create initial Vagrant template to run the box
 - [x] tune packer template
 - [x] test box
 - [X] update readme with instructions
-
-
-## HINTS
-
-- Starting from Ubuntu Bionic Beaver LTS **RELEASE** ( warning - RELEASE .e.g ) the server ISO to use must be alternative iso, not main one, casper.
