@@ -1,8 +1,8 @@
 # packer-ubuntu
-*Vagrant* **base box**¹ of Ubuntu Bionic Beaver 64bit created with *Packer* for run in *VirtualBox*.
+*Vagrant* *VirtualBox* **base box**¹ of Ubuntu Bionic Beaver 64bit created with *Packer* .
 For the corresponding technologies mentioned here see in details [Prerequisite section](#prerequisites)
 
-*¹* - There are a special category of boxes known as "base boxes." These boxes contain the bare minimum required for Vagrant to function, are generally not made by repackaging an existing Vagrant environment (hence the "base" in the "base box").
+*¹* - *There are a special category of boxes known as "base boxes." These boxes contain the bare minimum required for Vagrant to function, are generally not made by repackaging an existing Vagrant environment (hence the "base" in the "base box").*
 
 # Purpose 
 
