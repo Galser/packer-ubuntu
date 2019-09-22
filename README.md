@@ -30,7 +30,7 @@ cd packer-ubuntu
 - Now to create the Vagrant base box we are going to use Packer and [template](templates.json) with [provision scripts](scripts/provision.sh) provided in this repo.
 *Note: It is going to take some time, as Packer need to download the full ISO image of the operating system, run it, make installation and all required adjustments and then pack everything into format suitable for consuming by Vagrant running with VirtualBox*
 ```
-packer template.json
+packer build template.json
 ```
 
 In case of successful process completion you would see these lines :
@@ -45,6 +45,7 @@ In case of successful process completion you would see these lines :
      ubuntu-1804-vbox (vagrant): Compressing: ubuntu-1804-vbox-disk001.vmdk     
  Build 'ubuntu-1804-vbox' finished.
 ```
+
 Now you should have file `ubuntu-1804-vbox.box` in the current folder. This is you Vagrant base box with Ubuntu Bionice Beaver 64Bit. Congratulations! 
 You can stop here, or do several *complimentary steps* to test run the box. 
 
@@ -69,10 +70,11 @@ Output should look like :
  ```
  
 - To create and provision virtual machine with Vagrant - execute from command line :
+> This will utilize settings from previous step - from Vagrantfile
  ```
  vagrant up
  ```
- ( *This will utilize settings from previous step - from Vagrantfile* )
+
 
 - At this point VM already up and running , so you can use SSH client to connect to it. For example for Linux and MacOS - execute from command-line : 
  ```
@@ -95,22 +97,20 @@ Play around, but remember - this is **base box** - e.g. bare minimum Ubuntu Linu
  ```
  vagrant destroy
  ``` 
+ 
  Next you should see the question on a new line :
  ```
  default: Are you sure you want to destroy the 'default' VM? [y/N]
  ```
+ 
  Answer `y` from keyboard, and you are good to go
 
 # TODO
-
+- [ ] add steps to publish box on vagrant cloud using `vagrant cloud publish`
 
 # DONE
-
 - [x] create inital readme
-- [X] get require ISO links and checksums :
-    - [Ubuntu 18.04.3](http://cdimage.ubuntu.com/releases/18.04.3/release/ubuntu-18.04.3-server-amd64.iso)
-    - CRC  : "7d8e0055d663bffa27c1718685085626cb59346e7626ba3d3f476322271f573e"
-    - hint - starting from Ubuntu Bionic Beaver LTS **RELEASE** - the server ISO to use must be alternative iso, not main one, casper.
+- [X] get require ISO links and checksums
 - [X] create basic template
 - [X] build first box
 - [X] create initial Vagrant template to run the box
