@@ -122,7 +122,7 @@ Play around, but remember - this is **base box** - e.g. bare minimum Ubuntu Linu
   Password (will be hidden): 
   Token description (Defaults to "Vagrant login from ***.home"):
   ```
-- To publish box (you will need organization - if you jsut have create account - will be the same as your user name), enter :
+- To publish box (you will need organization - if you just have created account - it will be the same as your user name), enter :
   ```
   vagrant cloud publish YOUR_OGRANIZATION/ubuntu-1804-vbox 0.0.1 virtualbox ubuntu-1804-vbox.box
   ```
@@ -160,7 +160,7 @@ Play around, but remember - this is **base box** - e.g. bare minimum Ubuntu Linu
  
 
 # TODO
-- [X] add steps to publish box on vagrant cloud using `vagrant cloud publish`
+
 
 # DONE
 - [x] create inital readme
@@ -171,3 +171,4 @@ Play around, but remember - this is **base box** - e.g. bare minimum Ubuntu Linu
 - [x] tune packer template
 - [x] test box
 - [X] update readme with instructions
+- [X] add steps to publish box on vagrant cloud using `vagrant cloud publish`
