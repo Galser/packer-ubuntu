@@ -104,9 +104,63 @@ Play around, but remember - this is **base box** - e.g. bare minimum Ubuntu Linu
  ```
  
  Answer `y` from keyboard, and you are good to go
+ 
+ 
+## Add-On : Publishing box on Vagrant Cloud
+
+[Vagrant Cloud](https://app.vagrantup.com/) is a service that provides the following features for Vagrant:
+[Vagrant Box Catalog](https://www.vagrantup.com/docs/vagrant-cloud/boxes/catalog.html), [Vagrant Box Creation](https://www.vagrantup.com/docs/vagrant-cloud/boxes/create.html) and [Vagrant Box Versioning](https://www.vagrantup.com/docs/vagrant-cloud/boxes/lifecycle.html). So it serves a public, searchable index of Vagrant boxes. It's easy to find boxes you can use with Vagrant that contain the technologies you need for a Vagrant environment. You can also upload (publish) your own box, and in addition  - have versioning - so that members of your team using Vagrant can update the underlying box easily, and the people who create boxes can push fixes and communicate these fixes efficiently. 
+- To publish box in Vagrant cloud you will need a corrsponding account. If you don't have one, please [register here](https://app.vagrantup.com/account/new
+)
+- Login by executing the command in the folder with clone of this repository : 
+  ```
+  vagrant cloud auth login
+  ```
+  You will need to fill username and password. And just accept for now default token name.
+  ```
+  Vagrant Cloud username or email: [your_user_name] 
+  Password (will be hidden): 
+  Token description (Defaults to "Vagrant login from ***.home"):
+  ```
+- To publish box (you will need organization - if you jsut have create account - will be the same as your user name), enter :
+  ```
+  vagrant cloud publish YOUR_OGRANIZATION/ubuntu-1804-vbox 0.0.1 virtualbox ubuntu-1804-vbox.box
+  ```
+  You are going to see some output like this : 
+  ```
+  You are about to publish a box on Vagrant Cloud with the following options:
+  YOUR_OGRANIZATION/ubuntu-1804-vbox:   (v0.0.1) for provider 'virtualbox'
+  Do you wish to continue? [y/N] y
+  ```
+  Answer 'y', and wait. now Vagrant going to upload the box, so, depending from your Internt connection it cane tkae some time, second or minutes.
+  At the end you should see a message starting with : 
+  ```
+  Complete! Published YOUR_OGRANIZATION/ubuntu-1804-vbox
+  tag:        YOUR_OGRANIZATION/ubuntu-1804-vbox
+  username:   YOUR_USER_NAME
+  name:       ubuntu-1804-vbox
+  ```
+- Now you can go and check online, in [dashboard of Vagrant cloud](https://app.vagrantup.com/).
+  Please pay attention, that at first your box is going to have no released version, you should see a banner with yellow background warning on the page :
+  ```
+  This box has no released versions. It will not be available from vagrant box add, nor will it show up in search results.
+  ```
+  So, if you want to be able to add this box on another computer, and for this image to be searchable, you need to make some additional steps : 
+  - Click on the name of the box in Dashboard
+  - In the new screen, ( that will have URL like this : '''https://app.vagrantup.com/YOUR_ORGANITZATION/boxes/ubuntu-1804-vbox''') find the version you've just deployed - 0.0.1, next to it going to be remark *unreleased* and a blue button **Release**, press it.
+  - Next screen will appear - where you can fill the details for you box - for example enter - description in [Markdown syntax](https://guides.github.com/features/mastering-markdown/), when you done - press button "Update version"
+  - Now to actually *release* box - you need to press button **"Release version"** in the top-left corner of the main screen
+  - And you are going to be back to the box information scren, where at the top you can see new banner on green background : 
+  ```
+  Successfully released
+  ```
+  - That's it. You've just published box in Vagrant cloud, and it is avaible for search and usage.
+  
+  
+ 
 
 # TODO
-- [ ] add steps to publish box on vagrant cloud using `vagrant cloud publish`
+- [X] add steps to publish box on vagrant cloud using `vagrant cloud publish`
 
 # DONE
 - [x] create inital readme
