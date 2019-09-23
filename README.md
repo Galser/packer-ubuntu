@@ -132,7 +132,7 @@ Play around, but remember - this is **base box** - e.g. bare minimum Ubuntu Linu
   YOUR_OGRANIZATION/ubuntu-1804-vbox:   (v0.0.1) for provider 'virtualbox'
   Do you wish to continue? [y/N] y
   ```
-  Answer 'y', and wait. now Vagrant going to upload the box, so, depending from your Internt connection it cane tkae some time, second or minutes.
+  Answer `y`, and wait. Vagrant going to upload the box, so, depending from your Internt connection it wil ltake some time.
   At the end you should see a message starting with : 
   ```
   Complete! Published YOUR_OGRANIZATION/ubuntu-1804-vbox
@@ -140,7 +140,7 @@ Play around, but remember - this is **base box** - e.g. bare minimum Ubuntu Linu
   username:   YOUR_USER_NAME
   name:       ubuntu-1804-vbox
   ```
-- Now you can go and check online, in [dashboard of Vagrant cloud](https://app.vagrantup.com/).
+- Now you can go and check online, in [dashboard of Vagrant cloud](https://app.vagrantup.com/) for the box with name *ubuntu-1804-vbox*.
   Please pay attention, that at first your box is going to have no released version, you should see a banner with yellow background warning on the page :
   ```
   This box has no released versions. It will not be available from vagrant box add, nor will it show up in search results.
